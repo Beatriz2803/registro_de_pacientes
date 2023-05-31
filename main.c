@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <string.h>
 #define MAX_PACIENTES 100
-
+//A
 typedef struct {
     char nombre[60];
     char apellido[60];
