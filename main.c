@@ -77,7 +77,7 @@ void ingresarPaciente(paciente* listaPacientes, int* tamano) {
     printf("Ingrese condicion del paciente: ");
     scanf("%s", nuevoPaciente.condicion);
 
-    nuevoPaciente.darDeBaja = 0; // Inicialmente, el paciente no está dado de baja
+    nuevoPaciente.darDeBaja = 0; 
 
     listaPacientes[*tamano] = nuevoPaciente;
     (*tamano)++;
