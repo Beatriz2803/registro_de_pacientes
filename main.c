@@ -58,19 +58,19 @@ void ingresarPaciente(paciente* listaPacientes, int* tamano) {
 
     paciente nuevoPaciente;//ingresar los datos de nuevo paciente
 
-    printf("Ingrese nombre del paciente: ");
+    printf("Ingrese nombre del paciente: ");//proporcionamos el nombre 
     scanf("%s", nuevoPaciente.nombre);
 
-    printf("Ingrese apellido del paciente: ");
+    printf("Ingrese apellido del paciente: ");//proporcionamos el apellido
     scanf("%s", nuevoPaciente.apellido);
 
-    printf("Ingrese edad del paciente: ");
+    printf("Ingrese edad del paciente: ");//proporcionamos la edad
     scanf("%d", &nuevoPaciente.edad);
 
-    printf("Ingrese altura del paciente: ");
+    printf("Ingrese altura del paciente: ");//proporcionamos la altura
     scanf("%d", &nuevoPaciente.altura);
 
-    printf("Ingrese peso del paciente: ");
+    printf("Ingrese peso del paciente: ");//proporcionamos el peso
     scanf("%f", &nuevoPaciente.peso);
 
     printf("Ingrese obra social del paciente: ");
