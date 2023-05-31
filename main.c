@@ -1,3 +1,4 @@
+//regristo de pacientes
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -55,7 +56,7 @@ void ingresarPaciente(paciente* listaPacientes, int* tamano) {
         return;
     }
 
-    paciente nuevoPaciente;
+    paciente nuevoPaciente;//ingresar los datos de nuevo paciente
 
     printf("Ingrese nombre del paciente: ");
     scanf("%s", nuevoPaciente.nombre);
@@ -90,7 +91,7 @@ void ingresarPaciente(paciente* listaPacientes, int* tamano) {
 }
 
 void mostrarPacientes(paciente* listaPacientes, int tamano) {
-    printf("Lista de pacientes registrados:\n");
+    printf("Lista de pacientes registrados:\n");//a continuacion se muestra los datos de los pacientes registrados
     for (int i = 0; i < tamano; i++) {
         printf("Paciente %d:\n", i + 1);
         printf("Nombre: %s\n", listaPacientes[i].nombre);
