@@ -16,9 +16,9 @@ typedef struct { //Define una estructura en la cual se ingresan distinto tipos d
     int darDeBaja;
 } paciente;
 
-void darDeBaja(paciente* listaPacientes, int tamano);
-void ingresarPaciente(paciente* listaPacientes, int* tamano);
-void mostrarPacientes(paciente* listaPacientes, int tamano);
+void darDeBaja(paciente* listaPacientes, int tamano);// Permitirá eliminar a un paciente registrado en la lista.
+void ingresarPaciente(paciente* listaPacientes, int* tamano);//Se cargará la informacion de un paciente.
+void mostrarPacientes(paciente* listaPacientes, int tamano);//vizualizacion de la lista de pacientes y sus datos correspondientes.  
 void menu();
 
 void darDeBaja(paciente* listaPacientes, int tamano) {
