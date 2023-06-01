@@ -1,4 +1,4 @@
-//regristo de pacientes
+//Gestion de pacientes de un hospital
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
