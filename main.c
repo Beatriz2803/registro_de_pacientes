@@ -12,11 +12,9 @@ typedef struct { //Define una estructura en la cual se ingresan distinto tipos d
     float peso; //Tipo de dato decimal.
     char obraSocial[50];
     char condicion[500];
-<<<<<<< HEAD
     char alergias[150];
-=======
     char alergia[500];
->>>>>>> fe1e278f2d25dc26aac360f324f8aca4c8a78c25
+    char alergia[500];
     int darDeBaja;
 } paciente;
 
@@ -84,14 +82,14 @@ void ingresarPaciente(paciente* listaPacientes, int* tamano) {
     scanf("%s", nuevoPaciente.condicion);
 
     printf("Ingrese alergias del paciente: ");
-<<<<<<< HEAD
+
     scanf("%s", nuevoPaciente.alergias);
 
-
-=======
     scanf("%s", nuevoPaciente.alergia);
     
->>>>>>> fe1e278f2d25dc26aac360f324f8aca4c8a78c25
+    scanf("%s", nuevoPaciente.alergia);
+    
+
     nuevoPaciente.darDeBaja = 0; 
 
     listaPacientes[*tamano] = nuevoPaciente;
@@ -111,11 +109,13 @@ void mostrarPacientes(paciente* listaPacientes, int tamano) {
         printf("Peso: %.2f\n", listaPacientes[i].peso);
         printf("Obra Social: %s\n", listaPacientes[i].obraSocial);
         printf("Condicion: %s\n", listaPacientes[i].condicion);
-<<<<<<< HEAD
+
         printf("Alergias: %s\n", listaPacientes[i].alergias);
-=======
+
         printf("alergias: %s\n", listaPacientes[i].alergia);
->>>>>>> fe1e278f2d25dc26aac360f324f8aca4c8a78c25
+
+        printf("alergias: %s\n", listaPacientes[i].alergia);
+
         printf("----------------------------\n");
     }
 }
