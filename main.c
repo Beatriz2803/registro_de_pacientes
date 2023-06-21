@@ -11,6 +11,7 @@ typedef struct {
     float peso;
     char obraSocial[50];
     char condicion[500];
+    char alergias[150];
     int darDeBaja;
 } paciente;
 
@@ -77,7 +78,11 @@ void ingresarPaciente(paciente* listaPacientes, int* tamano) {
     printf("Ingrese condicion del paciente: ");
     scanf("%s", nuevoPaciente.condicion);
 
-    nuevoPaciente.darDeBaja = 0; // Inicialmente, el paciente no está dado de baja
+    printf("Ingrese alergias del paciente: ");
+    scanf("%s", nuevoPaciente.alergias);
+
+
+    nuevoPaciente.darDeBaja = 0; 
 
     listaPacientes[*tamano] = nuevoPaciente;
     (*tamano)++;
@@ -96,6 +101,7 @@ void mostrarPacientes(paciente* listaPacientes, int tamano) {
         printf("Peso: %.2f\n", listaPacientes[i].peso);
         printf("Obra Social: %s\n", listaPacientes[i].obraSocial);
         printf("Condicion: %s\n", listaPacientes[i].condicion);
+        printf("Alergias: %s\n", listaPacientes[i].alergias);
         printf("----------------------------\n");
     }
 }
