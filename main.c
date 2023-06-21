@@ -1,23 +1,28 @@
+//Gestion de pacientes de un hospital
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #define MAX_PACIENTES 100
 
-typedef struct {
-    char nombre[60];
+typedef struct { //Define una estructura en la cual se ingresan distinto tipos de datos.
+    char nombre[60]; //Tipo de dato "caracter" con un maximo de [60] a ingresar.
     char apellido[60];
-    int edad;
+    int edad; //Tipo de dato entero.
     int altura;
-    float peso;
+    float peso; //Tipo de dato decimal.
     char obraSocial[50];
     char condicion[500];
+<<<<<<< HEAD
     char alergias[150];
+=======
+    char alergia[500];
+>>>>>>> fe1e278f2d25dc26aac360f324f8aca4c8a78c25
     int darDeBaja;
 } paciente;
 
-void darDeBaja(paciente* listaPacientes, int tamano);
-void ingresarPaciente(paciente* listaPacientes, int* tamano);
-void mostrarPacientes(paciente* listaPacientes, int tamano);
+void darDeBaja(paciente* listaPacientes, int tamano);// Permitirá eliminar a un paciente registrado en la lista.
+void ingresarPaciente(paciente* listaPacientes, int* tamano);//Se cargará la informacion de un paciente.
+void mostrarPacientes(paciente* listaPacientes, int tamano);//vizualizacion de la lista de pacientes y sus datos correspondientes.  
 void menu();
 
 void darDeBaja(paciente* listaPacientes, int tamano) {
@@ -55,21 +60,21 @@ void ingresarPaciente(paciente* listaPacientes, int* tamano) {
         return;
     }
 
-    paciente nuevoPaciente;
+    paciente nuevoPaciente;//ingresar los datos de nuevo paciente
 
-    printf("Ingrese nombre del paciente: ");
+    printf("Ingrese nombre del paciente: ");//proporcionamos el nombre 
     scanf("%s", nuevoPaciente.nombre);
 
-    printf("Ingrese apellido del paciente: ");
+    printf("Ingrese apellido del paciente: ");//proporcionamos el apellido
     scanf("%s", nuevoPaciente.apellido);
 
-    printf("Ingrese edad del paciente: ");
+    printf("Ingrese edad del paciente: ");//proporcionamos la edad
     scanf("%d", &nuevoPaciente.edad);
 
-    printf("Ingrese altura del paciente: ");
+    printf("Ingrese altura del paciente: ");//proporcionamos la altura
     scanf("%d", &nuevoPaciente.altura);
 
-    printf("Ingrese peso del paciente: ");
+    printf("Ingrese peso del paciente: ");//proporcionamos el peso
     scanf("%f", &nuevoPaciente.peso);
 
     printf("Ingrese obra social del paciente: ");
@@ -79,9 +84,14 @@ void ingresarPaciente(paciente* listaPacientes, int* tamano) {
     scanf("%s", nuevoPaciente.condicion);
 
     printf("Ingrese alergias del paciente: ");
+<<<<<<< HEAD
     scanf("%s", nuevoPaciente.alergias);
 
 
+=======
+    scanf("%s", nuevoPaciente.alergia);
+    
+>>>>>>> fe1e278f2d25dc26aac360f324f8aca4c8a78c25
     nuevoPaciente.darDeBaja = 0; 
 
     listaPacientes[*tamano] = nuevoPaciente;
@@ -91,7 +101,7 @@ void ingresarPaciente(paciente* listaPacientes, int* tamano) {
 }
 
 void mostrarPacientes(paciente* listaPacientes, int tamano) {
-    printf("Lista de pacientes registrados:\n");
+    printf("Lista de pacientes registrados:\n");//a continuacion se muestra los datos de los pacientes registrados
     for (int i = 0; i < tamano; i++) {
         printf("Paciente %d:\n", i + 1);
         printf("Nombre: %s\n", listaPacientes[i].nombre);
@@ -101,17 +111,21 @@ void mostrarPacientes(paciente* listaPacientes, int tamano) {
         printf("Peso: %.2f\n", listaPacientes[i].peso);
         printf("Obra Social: %s\n", listaPacientes[i].obraSocial);
         printf("Condicion: %s\n", listaPacientes[i].condicion);
+<<<<<<< HEAD
         printf("Alergias: %s\n", listaPacientes[i].alergias);
+=======
+        printf("alergias: %s\n", listaPacientes[i].alergia);
+>>>>>>> fe1e278f2d25dc26aac360f324f8aca4c8a78c25
         printf("----------------------------\n");
     }
 }
 
-void menu() {
+void menu() { 
     paciente listaPacientes[MAX_PACIENTES];
     int tamano = 0;
 
-    int opcion;
-    do {
+    int opcion; 
+    do { //Cumple la funcion de menu.
         printf(" --- Registro de pacientes --- \n");
         printf("1. Ingresar un nuevo paciente\n");
         printf("2. Dar de baja a un paciente\n");
@@ -120,10 +134,10 @@ void menu() {
         printf("Ingrese una opcion: ");
         scanf("%d", &opcion);
 
-        switch (opcion) {
+        switch (opcion) { //Permite seleccionar las opciones y que se lleve acabo la funcion a la cual fueron asignadas.
             case 1: {
                 ingresarPaciente(listaPacientes, &tamano);
-                break;
+                break;// finaliza la ejecución de la instrucción do, switch o while
             }
             case 2: {
                 darDeBaja(listaPacientes, tamano);
@@ -134,7 +148,7 @@ void menu() {
                 break;
             }
             case 0: {
-                printf("Saliendo del programa...\n");
+                printf("Saliendo del programa...\n"); //Permite salir del programa debido a que se afectada por "while (opcion != 0)".
                 break;
             }
             default:
@@ -146,7 +160,7 @@ void menu() {
         printf("Presione una tecla para continuar...\n");
         getchar();
         system("cls");
-    } while (opcion != 0);
+    } while (opcion != 0); //Cuando se seleccione una opcion distinta de 0 el programa finalizara.
 }
 
 int main() {
